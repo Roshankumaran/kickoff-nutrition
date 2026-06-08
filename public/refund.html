@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Refund & Cancellation Policy | Kick Off Nutritions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #E50914;
+      --primary-hover: #ff1c27;
+      --background: #0b0b0b;
+      --surface: #121212;
+      --border: rgba(255, 255, 255, 0.08);
+      --text: #e0e0e0;
+      --text-muted: #a0a0a0;
+      --white: #ffffff;
+      --font-display: 'Anton', sans-serif;
+      --font-sans: 'Inter', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background-color: #0f0f0f;
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+      backdrop-filter: blur(8px);
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .logo-img {
+      max-height: 40px;
+      width: auto;
+      object-fit: contain;
+      margin-right: 10px;
+    }
+
+    .logo-text {
+      font-family: var(--font-display);
+      font-size: 24px;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      color: var(--primary);
+    }
+
+    .logo-text span {
+      color: var(--white);
+    }
+
+    .nav-links a {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-decoration: none;
+      margin-left: 24px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .content-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+
+    .policy-container {
+      max-width: 850px;
+      margin: 0 auto;
+      background-color: var(--surface);
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      padding: 48px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: 36px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+
+    .last-updated {
+      font-size: 13px;
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 36px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      display: inline-block;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 4px;
+    }
+
+    h2 {
+      font-family: var(--font-display);
+      font-size: 18px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-top: 36px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    h2::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background-color: var(--border);
+    }
+
+    p {
+      margin-bottom: 18px;
+      color: var(--text-muted);
+      font-size: 15px;
+    }
+
+    ul {
+      margin-bottom: 20px;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      color: var(--text-muted);
+      font-size: 15px;
+    }
+
+    .highlight-box {
+      background: rgba(229, 9, 20, 0.06);
+      border-left: 4px solid var(--primary);
+      padding: 24px;
+      border-radius: 8px;
+      margin-top: 20px;
+      margin-bottom: 24px;
+      border-top: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .highlight-box p {
+      color: var(--white);
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+
+    .contact-card {
+      background: rgba(229, 9, 20, 0.03);
+      border-left: 4px solid var(--primary);
+      padding: 24px;
+      border-radius: 8px;
+      margin-top: 28px;
+      border-top: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contact-card strong {
+      color: var(--white);
+    }
+
+    .contact-card a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .contact-card a:hover {
+      color: var(--primary-hover);
+    }
+
+    footer {
+      background-color: #0f0f0f;
+      border-top: 1px solid var(--border);
+      padding: 48px 24px;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 13px;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.6);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+
+    .copyright {
+      margin-top: 12px;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        gap: 16px;
+      }
+      .nav-links a {
+        margin: 0 12px;
+      }
+      .policy-container {
+        padding: 24px;
+        border-radius: 12px;
+      }
+      h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <a href="/" class="logo-container">
+        <img src="/logo.png" alt="KICKOFF" class="logo-img" onerror="this.style.display='none'">
+        <span class="logo-text">KICK<span>OFF</span></span>
+      </a>
+      <nav class="nav-links">
+        <a href="/">Shop</a>
+        <a href="/about">About Us</a>
+        <a href="/contact.html">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="content-wrapper">
+    <div class="policy-container">
+      <h1>Refund & Cancellation Policy</h1>
+      <div class="last-updated">Last Updated: June 8, 2026</div>
+
+      <p>At <strong>Kick Off Nutritions</strong>, we take pride in offering premium gym health supplements, protein powders, pre-workouts, and wellness supplements. Because we handle nutritional and consumable items, product safety, hygiene, and storage integrity are our highest priorities. Consequently, we maintain a strict policy regarding cancellations, refunds, and exchanges.</p>
+
+      <div class="highlight-box">
+        <p>ALL SALES ARE FINAL. We do not offer cash refunds, store credits, or product exchanges under any standard circumstances once an order has been completed and processed.</p>
+      </div>
+
+      <h2>1. Order Cancellations & Modifications</h2>
+      <p>Once you place an order and payment is completed through our secure Razorpay gateway, the order is instantly pushed to our fulfillment warehouse for packing and dispatch. Therefore:</p>
+      <ul>
+        <li><strong>No Cancellations:</strong> Orders cannot be cancelled after they have been processed or shipped.</li>
+        <li><strong>No Modifications:</strong> We cannot modify items, adjust flavors, change sizes, or combine orders once processing has started. Please double-check your cart contents before proceeding to checkout.</li>
+      </ul>
+
+      <h2>2. Shipping & Delivery Timeline</h2>
+      <p>We utilize premium courier partners to dispatch supplements safely across India:</p>
+      <ul>
+        <li><strong>Delivery Window:</strong> Orders are dispatched from our warehouse within 24–48 hours and typically reach customers within <strong>3–4 working days</strong> across India.</li>
+        <li><strong>Address Responsibility:</strong> Customers must provide accurate shipping addresses and active phone numbers. Kick Off Nutritions is not liable for failed deliveries, returned packages, or courier delays due to incorrect details or unavailable recipients.</li>
+      </ul>
+
+      <h2>3. Damaged, Defective, or Incorrect Products</h2>
+      <p>In the highly unlikely event that your package is damaged during transit, has a manufacturing defect, or if you receive the wrong product, we will facilitate a replacement. Please follow our verification guidelines:</p>
+      <ul>
+        <li><strong>Reporting Window:</strong> You must report the issue to our customer support within <strong>24 hours of delivery</strong>. Claims made after this window will not be eligible for review.</li>
+        <li><strong>Requirements:</strong> To process a claim, you must email <a href="mailto:Dysonbolt29@gmail.com" style="color: var(--primary); text-decoration: none; font-weight: 600;">Dysonbolt29@gmail.com</a> with:
+          <ol style="margin-left: 20px; margin-top: 8px; list-style-type: decimal;">
+            <li style="margin-bottom: 4px;">Your Order ID.</li>
+            <li style="margin-bottom: 4px;">Clear photos of the courier box showing the outer package, shipping label, and the product seal.</li>
+            <li style="margin-bottom: 4px;">An continuous unboxing video showing the opening of the package and detailing the damage/defect.</li>
+          </ol>
+        </li>
+        <li><strong>Resolution:</strong> Upon verification of your claim, we will dispatch a brand-new replacement product at no additional charge. Under no circumstances are cash or bank refunds processed.</li>
+      </ul>
+
+      <h2>4. Payment Failures</h2>
+      <p>If payment fails during the checkout process but money is debited from your account, the amount is usually credited back to your original payment source automatically within 5–7 working days by Razorpay or your banking partner.</p>
+
+      <div class="contact-card">
+        <strong>Kick Off Nutritions</strong><br>
+        <strong>Email:</strong> <a href="mailto:Dysonbolt29@gmail.com">Dysonbolt29@gmail.com</a><br>
+        <strong>Phone:</strong> +91 9962201000<br>
+        <strong>Address:</strong> Red Hills, Chennai, Tamil Nadu, India<br>
+        <strong>Business Hours:</strong> Monday–Saturday, 9:00 AM–6:00 PM (IST)
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-links">
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms & Conditions</a>
+        <a href="/refund.html">Refund & Cancellation Policy</a>
+        <a href="/contact.html">Contact Us</a>
+      </div>
+      <p>© 2026 KICKOFF Nutrition. All rights reserved.</p>
+      <p class="copyright">Kick Off Nutritions | Gym Health Supplements & Fitness Nutrition Products Store</p>
+    </div>
+  </footer>
+
+</body>
+</html>

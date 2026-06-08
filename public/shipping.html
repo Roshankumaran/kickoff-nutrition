@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shipping Policy | Kick Off Nutritions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #E50914;
+      --primary-hover: #ff1c27;
+      --background: #0b0b0b;
+      --surface: #121212;
+      --border: rgba(255, 255, 255, 0.08);
+      --text: #e0e0e0;
+      --text-muted: #a0a0a0;
+      --white: #ffffff;
+      --font-display: 'Anton', sans-serif;
+      --font-sans: 'Inter', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background-color: #0f0f0f;
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+      backdrop-filter: blur(8px);
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .logo-img {
+      max-height: 40px;
+      width: auto;
+      object-fit: contain;
+      margin-right: 10px;
+    }
+
+    .logo-text {
+      font-family: var(--font-display);
+      font-size: 24px;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      color: var(--primary);
+    }
+
+    .logo-text span {
+      color: var(--white);
+    }
+
+    .nav-links a {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-decoration: none;
+      margin-left: 24px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .content-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+
+    .policy-container {
+      max-width: 850px;
+      margin: 0 auto;
+      background-color: var(--surface);
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      padding: 48px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: 36px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+
+    .last-updated {
+      font-size: 13px;
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 36px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      display: inline-block;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 4px;
+    }
+
+    h2 {
+      font-family: var(--font-display);
+      font-size: 18px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-top: 36px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    h2::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background-color: var(--border);
+    }
+
+    p {
+      margin-bottom: 18px;
+      color: var(--text-muted);
+      font-size: 15px;
+    }
+
+    ul {
+      margin-bottom: 20px;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      color: var(--text-muted);
+      font-size: 15px;
+    }
+
+    .shipping-badge-card {
+      background: rgba(229, 9, 20, 0.05);
+      border-left: 4px solid var(--primary);
+      padding: 24px;
+      border-radius: 8px;
+      margin-top: 20px;
+      margin-bottom: 24px;
+      border-top: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .shipping-badge-card h3 {
+      font-family: var(--font-display);
+      font-size: 15px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+
+    .contact-card {
+      background: rgba(229, 9, 20, 0.03);
+      border-left: 4px solid var(--primary);
+      padding: 24px;
+      border-radius: 8px;
+      margin-top: 28px;
+      border-top: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contact-card strong {
+      color: var(--white);
+    }
+
+    .contact-card a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .contact-card a:hover {
+      color: var(--primary-hover);
+    }
+
+    footer {
+      background-color: #0f0f0f;
+      border-top: 1px solid var(--border);
+      padding: 48px 24px;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 13px;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.6);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+
+    .copyright {
+      margin-top: 12px;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        gap: 16px;
+      }
+      .nav-links a {
+        margin: 0 12px;
+      }
+      .policy-container {
+        padding: 24px;
+        border-radius: 12px;
+      }
+      h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <a href="/" class="logo-container">
+        <img src="/logo.png" alt="KICKOFF" class="logo-img" onerror="this.style.display='none'">
+        <span class="logo-text">KICK<span>OFF</span></span>
+      </a>
+      <nav class="nav-links">
+        <a href="/">Shop</a>
+        <a href="/about">About Us</a>
+        <a href="/contact.html">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="content-wrapper">
+    <div class="policy-container">
+      <h1>Shipping Policy</h1>
+      <div class="last-updated">Last Updated: June 8, 2026</div>
+
+      <p>Thank you for choosing <strong>Kick Off Nutritions</strong>. We are committed to delivering your gym supplements, protein powders, pre-workouts, and wellness products in a safe, hygienic, and timely manner. This Shipping Policy explains our processing times, shipping rates, and delivery procedures.</p>
+
+      <div class="shipping-badge-card">
+        <h3>Free Shipping Guarantee</h3>
+        <p>We offer FREE standard delivery on all orders above <strong>₹999</strong> across India. For orders below ₹999, a nominal flat shipping fee is charged at checkout.</p>
+      </div>
+
+      <h2>1. Processing & Dispatch Timelines</h2>
+      <ul>
+        <li><strong>Order Fulfillment:</strong> All orders are processed, quality-checked, and dispatched from our warehouse in Red Hills, Chennai within <strong>24 to 48 hours</strong> of order confirmation (excluding Sundays and public holidays).</li>
+        <li><strong>Secure Packaging:</strong> Our products are carefully packed in heavy-duty cardboard boxes with secure, tamper-proof tape to maintain item integrity during transit.</li>
+      </ul>
+
+      <h2>2. Delivery Estimates</h2>
+      <p>We deliver to pin codes across India using trusted logistics partners (such as Delhivery, Blue Dart, DTDC, and Speed Post):</p>
+      <ul>
+        <li><strong>Estimated Delivery Time:</strong> Standard shipping takes approximately <strong>3 to 4 working days</strong> from the date of dispatch.</li>
+        <li><strong>Metro Cities:</strong> Deliveries to metropolitan cities (Mumbai, Delhi, Bangalore, Kolkata, Chennai, Hyderabad, Pune) may occur even faster (2–3 working days).</li>
+        <li><strong>Rest of India:</strong> Deliveries to non-metros or remote parts of the country may take up to 4–5 working days.</li>
+      </ul>
+
+      <h2>3. Order Tracking</h2>
+      <p>Once your order has been dispatched, you will receive an automated email and SMS notification containing the tracking link and tracking ID. You can monitor your package's transit journey directly on our website or our shipping partner's portal.</p>
+
+      <h2>4. Delivery Conditions</h2>
+      <ul>
+        <li><strong>Verification:</strong> Our shipping partners may require a signature or a one-time password (OTP) to deliver the parcel safely. Please ensure you or an authorized representative are available at the shipping address to receive the package.</li>
+        <li><strong>Incorrect Addresses:</strong> Kick Off Nutritions is not responsible for failed deliveries resulting from incomplete or incorrect address details provided during checkout. Redelivery charges in such instances will be borne by the customer.</li>
+        <li><strong>Unboxing Protocol:</strong> We highly recommend taking a continuous unboxing video of your package upon receipt. In the rare case of transit damage or missing items, this unboxing video is required to claim a free replacement (refer to our Refund & Cancellation Policy).</li>
+      </ul>
+
+      <div class="contact-card">
+        <strong>Kick Off Nutritions</strong><br>
+        <strong>Email:</strong> <a href="mailto:Dysonbolt29@gmail.com">Dysonbolt29@gmail.com</a><br>
+        <strong>Phone:</strong> +91 9962201000<br>
+        <strong>Address:</strong> Red Hills, Chennai, Tamil Nadu, India<br>
+        <strong>Business Hours:</strong> Monday–Saturday, 9:00 AM–6:00 PM (IST)
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-links">
+        <a href="/about">About Us</a>
+        <a href="/shipping.html">Shipping Policy</a>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms & Conditions</a>
+        <a href="/refund.html">Refund & Cancellation Policy</a>
+        <a href="/contact.html">Contact Us</a>
+      </div>
+      <p>© 2026 KICKOFF Nutrition. All rights reserved.</p>
+      <p class="copyright">Kick Off Nutritions | Gym Health Supplements & Fitness Nutrition Products Store</p>
+    </div>
+  </footer>
+
+</body>
+</html>

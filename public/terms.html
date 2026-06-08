@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms & Conditions | Kick Off Nutritions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #E50914;
+      --primary-hover: #ff1c27;
+      --background: #0b0b0b;
+      --surface: #121212;
+      --border: rgba(255, 255, 255, 0.08);
+      --text: #e0e0e0;
+      --text-muted: #a0a0a0;
+      --white: #ffffff;
+      --font-display: 'Anton', sans-serif;
+      --font-sans: 'Inter', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background-color: #0f0f0f;
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+      backdrop-filter: blur(8px);
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .logo-img {
+      max-height: 40px;
+      width: auto;
+      object-fit: contain;
+      margin-right: 10px;
+    }
+
+    .logo-text {
+      font-family: var(--font-display);
+      font-size: 24px;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      color: var(--primary);
+    }
+
+    .logo-text span {
+      color: var(--white);
+    }
+
+    .nav-links a {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-decoration: none;
+      margin-left: 24px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .content-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+
+    .policy-container {
+      max-width: 850px;
+      margin: 0 auto;
+      background-color: var(--surface);
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      padding: 48px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: 36px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+
+    .last-updated {
+      font-size: 13px;
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 36px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      display: inline-block;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 4px;
+    }
+
+    h2 {
+      font-family: var(--font-display);
+      font-size: 18px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-top: 36px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    h2::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background-color: var(--border);
+    }
+
+    p {
+      margin-bottom: 18px;
+      color: var(--text-muted);
+      font-size: 15px;
+    }
+
+    ul {
+      margin-bottom: 20px;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      color: var(--text-muted);
+      font-size: 15px;
+    }
+
+    .disclaimer-card {
+      background: rgba(229, 9, 20, 0.05);
+      border-left: 4px solid var(--primary);
+      padding: 24px;
+      border-radius: 8px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      border-top: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .disclaimer-card h3 {
+      font-family: var(--font-display);
+      font-size: 15px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+
+    .contact-card {
+      background: rgba(229, 9, 20, 0.03);
+      border-left: 4px solid var(--primary);
+      padding: 24px;
+      border-radius: 8px;
+      margin-top: 28px;
+      border-top: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contact-card strong {
+      color: var(--white);
+    }
+
+    .contact-card a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .contact-card a:hover {
+      color: var(--primary-hover);
+    }
+
+    footer {
+      background-color: #0f0f0f;
+      border-top: 1px solid var(--border);
+      padding: 48px 24px;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 13px;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.6);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+
+    .copyright {
+      margin-top: 12px;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        gap: 16px;
+      }
+      .nav-links a {
+        margin: 0 12px;
+      }
+      .policy-container {
+        padding: 24px;
+        border-radius: 12px;
+      }
+      h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <a href="/" class="logo-container">
+        <img src="/logo.png" alt="KICKOFF" class="logo-img" onerror="this.style.display='none'">
+        <span class="logo-text">KICK<span>OFF</span></span>
+      </a>
+      <nav class="nav-links">
+        <a href="/">Shop</a>
+        <a href="/about">About Us</a>
+        <a href="/contact.html">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="content-wrapper">
+    <div class="policy-container">
+      <h1>Terms & Conditions</h1>
+      <div class="last-updated">Last Updated: June 8, 2026</div>
+
+      <p>Welcome to <strong>Kick Off Nutritions</strong>. By accessing and using our website (<a href="https://kickoffnutrition.in" style="color: var(--primary); text-decoration: none;">kickoffnutrition.in</a>) and purchasing products from us, you agree to comply with and be bound by the following Terms & Conditions. Please review them carefully before placing an order. If you do not agree to these terms, please do not use our website.</p>
+
+      <h2>1. Website Usage Rules</h2>
+      <p>To use this website, you must represent that you are at least 18 years of age or are accessing the website under the supervision of a parent or legal guardian. You agree to use the site only for lawful purposes, and you are prohibited from violating or attempting to violate the security of the website, including submitting any viruses, overloading, flooding, or scraping content.</p>
+
+      <h2>2. Product Information & Disclaimers</h2>
+      <p>We strive to ensure all product information, descriptions, images, and ingredients on our website are accurate and up-to-date. However, we do not warrant that product descriptions or other content are entirely error-free.</p>
+      
+      <div class="disclaimer-card">
+        <h3>Supplement Disclaimer</h3>
+        <p>All product descriptions, labels, and informational content provided on kickoffnutrition.in are for educational and informational purposes only. The products sold on our platform (including gym health supplements, protein powders, pre-workouts, creatine, vitamins, and wellness supplements) are not intended to diagnose, treat, cure, or prevent any medical condition or disease. Consult a qualified medical practitioner before starting any new dietary supplement or fitness regime.</p>
+      </div>
+
+      <h2>3. Order Placement & Acceptance</h2>
+      <p>When you place an order on our site, it constitutes an offer to purchase the selected products. Kick Off Nutritions reserves the right, in our sole discretion, to accept or decline any order for any reason, including but not limited to:</p>
+      <ul>
+        <li>Unavailability of the product.</li>
+        <li>Errors in product pricing or descriptions.</li>
+        <li>Suspicion of fraudulent or unauthorized transactions.</li>
+      </ul>
+      <p>If we cancel your order after payment is successfully processed, the charged amount will be fully credited back to your original source of payment through our secure payment channels.</p>
+
+      <h2>4. Pricing, Availability & Payments</h2>
+      <p>All prices listed on the website are displayed in Indian Rupees (INR) and are inclusive of applicable taxes, unless stated otherwise. Prices and availability of products are subject to change without prior notice. Secure payments are processed through the **Razorpay** payment gateway. By completing your transaction, you authorize Razorpay to charge your selected payment method.</p>
+
+      <h2>5. Prohibited Activities & Site Misuse</h2>
+      <p>Users are strictly prohibited from utilizing the website in a manner that causes, or is likely to cause, interruption, damage, or impairment to the site. Unauthorized commercial use, extraction of site data, or reproducing copyrighted materials (logos, text, and layout) without our written consent is legally punishable.</p>
+
+      <h2>6. Limitation of Liability</h2>
+      <p>Kick Off Nutritions, its owners, and employees shall not be liable for any direct, indirect, incidental, special, or consequential damages resulting from the use of, or the inability to use, this website or the performance and intake of any supplements purchased through our site. You consume wellness and gym supplements at your own discretion and risk.</p>
+
+      <h2>7. Governing Law & Dispute Resolution</h2>
+      <p>These Terms & Conditions are governed by and construed in accordance with the laws of the Republic of India. Any legal action, dispute, or claim arising out of or in connection with these terms, website usage, or product purchases shall be subject to the exclusive jurisdiction of the courts located in Chennai, Tamil Nadu, India.</p>
+
+      <h2>8. Changes to Terms</h2>
+      <p>We reserve the right to revise or modify these Terms & Conditions at any time without prior notice. Any changes will be updated directly on this page, and your continued usage of the website constitutes acceptance of the modified terms.</p>
+
+      <div class="contact-card">
+        <strong>Kick Off Nutritions</strong><br>
+        <strong>Email:</strong> <a href="mailto:Dysonbolt29@gmail.com">Dysonbolt29@gmail.com</a><br>
+        <strong>Phone:</strong> +91 9962201000<br>
+        <strong>Address:</strong> Red Hills, Chennai, Tamil Nadu, India<br>
+        <strong>Business Hours:</strong> Monday–Saturday, 9:00 AM–6:00 PM (IST)
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-links">
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms & Conditions</a>
+        <a href="/refund.html">Refund & Cancellation Policy</a>
+        <a href="/contact.html">Contact Us</a>
+      </div>
+      <p>© 2026 KICKOFF Nutrition. All rights reserved.</p>
+      <p class="copyright">Kick Off Nutritions | Gym Health Supplements & Fitness Nutrition Products Store</p>
+    </div>
+  </footer>
+
+</body>
+</html>
