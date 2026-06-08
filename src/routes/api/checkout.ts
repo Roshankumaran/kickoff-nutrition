@@ -4,6 +4,14 @@ import { supabaseAdmin } from '@/integrations/supabase/client.server';
 export const Route = createFileRoute('/api/checkout')({
   server: {
     handlers: {
+      GET: async () => {
+        return Response.json({
+          status: 'ok',
+          endpoint: '/api/checkout',
+          methods: ['GET', 'POST'],
+          message: 'POST cart items to create a checkout order.',
+        });
+      },
       POST: async ({ request }) => {
         try {
           const body = await request.json();
@@ -13,7 +21,6 @@ export const Route = createFileRoute('/api/checkout')({
             return Response.json({ error: 'Invalid cart items' }, { status: 400 });
           }
 
-          // Securely calculate total amount by fetching real prices from the database
           let totalAmount = 0;
 
           for (const item of cartItems) {
@@ -36,7 +43,6 @@ export const Route = createFileRoute('/api/checkout')({
             totalAmount += product.price * item.quantity;
           }
 
-          // TODO: In the future, create a real Razorpay order here using razorpay.orders.create
           const mockOrderId = `order_mock_${Date.now()}`;
 
           return Response.json({
